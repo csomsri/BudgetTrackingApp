@@ -1,6 +1,8 @@
 #ifndef MAINWINDOW_H_
 #define MAINWINDOW_H_
 
+#include <QChar>
+#include <QApplication>
 #include <QWidget>
 #include <QLabel>
 #include <QLineEdit>
@@ -9,8 +11,13 @@
 #include <QStackedWidget>
 #include <string>
 #include <QResizeEvent>
+#include <QGroupBox>
+#include <QMessageBox>
+#include <QObject>
+#include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QSqlError>
 #include "analyzer.h"
-
 #include "homepage.h"
 
 /*

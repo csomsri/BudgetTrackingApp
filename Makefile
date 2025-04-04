@@ -1,7 +1,8 @@
 # Compiler
 CXX = g++
-CXXFLAGS = -fPIC -std=c++11 `pkg-config --cflags Qt5Widgets`
-LDFLAGS  = `pkg-config --libs Qt5Widgets`
+CXXFLAGS = -fPIC -std=c++11 `pkg-config --cflags Qt5Widgets Qt5Sql`
+LDFLAGS  = `pkg-config --libs Qt5Widgets Qt5Sql`
+
 
 # Source and header files
 TARGET = App

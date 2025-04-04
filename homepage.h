@@ -1,6 +1,7 @@
 #ifndef HOMEPAGE_H_
 #define HOMEPAGE_H_
 
+#include <QChar>
 #include <QApplication>
 #include <QWidget>
 #include <QLabel>
@@ -13,25 +14,27 @@
 #include <QGroupBox>
 #include <QMessageBox>
 #include <QObject>
-
-// #include <QTSql>
+#include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QSqlError>
 
 
 class HomePage : public QWidget {
 	Q_OBJECT
 	public:
         	HomePage(QWidget *parent = nullptr); 
+                QString ShowUsername();
             
-    signals:
-        	void GoToPage2();
+        signals:
+                void GoToPage2();
 
-    private slots:
-            void OnButtonClicked();
+        private slots:
+                void OnButtonClicked();
 
-    private:
-            QLineEdit* user_input;
-            QLineEdit* EnterUser();
-            bool InputIsValid(QLineEdit* user_input);
+        private:
+                QLineEdit* user_input;
+                QLineEdit* EnterUser();
+                bool InputIsValid(QLineEdit* user_input);
 };
 
 

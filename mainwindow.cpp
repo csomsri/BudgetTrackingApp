@@ -16,10 +16,13 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
         stack->setCurrentIndex(0);
     });
 
+    QString username = p1->ShowUsername();
+    p2->SetDatabaseName(username);
+    // Create tabe based on username
     QVBoxLayout *main_layout = new QVBoxLayout(this);
     main_layout->addWidget(stack);
     setLayout(main_layout);
     setWindowTitle("Budget Tracker");
-    resize(400,200);
+    resize(600,200);
 }
 
